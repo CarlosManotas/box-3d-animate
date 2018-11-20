@@ -50,14 +50,14 @@ render() {
 ```
 ## Properties
 
-| `props` | Default | Type | Values |
+| Property | Default | Type | Values |
 |-----------------|---------|-------|----------|
-| leftSide | https://via.placeholder.com/200x200.png | String | url or import image |
-| rightSide | https://via.placeholder.com/200x200.png | String | url or import image |
-| frontSide | https://via.placeholder.com/200x200.png | String | url or import image |
-| backSide | https://via.placeholder.com/200x200.png | String | url or import image |
-| topSide | https://via.placeholder.com/200x200.png | String | url or import image |
-| bottomSide | https://via.placeholder.com/200x200.png | String | url or import image |
+| leftSide | https://via.placeholder.com/200 | String | url or import image |
+| rightSide | https://via.placeholder.com/200 | String | url or import image |
+| frontSide | https://via.placeholder.com/200 | String | url or import image |
+| backSide | https://via.placeholder.com/200 | String | url or import image |
+| topSide | https://via.placeholder.com/200 | String | url or import image |
+| bottomSide | https://via.placeholder.com/200 | String | url or import image |
 | perspective | 800px | String | 900px, 1200px, ... |
 | perspectiveOrigin | 50% -150px | String | 30% 50em, ... |
 | duration | 10s | String |  1s, 300ms... |
@@ -70,7 +70,7 @@ render() {
 | maxWidth | 150px | String | 200px, ... |
 | margin | 5em auto auto | String | 1px, auto 0, 4px auto 5px, ... |
 | shadowBottom | true | Boolean | true, false |
-| reverse | true | Boolean | true, false |
+| loading | `<LoadingComponent />` | ReactNode | `<span>loading...</span>` ... |
 
 
 ## License

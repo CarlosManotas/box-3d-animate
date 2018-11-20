@@ -52,6 +52,6 @@ const Loading = styled.div`
 
 `
 export default function LoadingComponent({ loading }) {
-  if (loading && typeof loading === 'object') return <React.Fragment>{loading}</React.Fragment>
+  if (React.isValidElement(loading)) return <React.Fragment>{loading}</React.Fragment>
   return <Loading><div /><div /></Loading>
 }

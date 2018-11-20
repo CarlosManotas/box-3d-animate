@@ -24,7 +24,7 @@ const Box3d = styled.div`
       transform: rotateY(0)
     }
     to {
-      transform: ${props => `rotateY(${props.reverse ? "-360deg" : "360deg"})`}
+      transform: rotateY(-360deg)
     }
   }
 
@@ -33,7 +33,7 @@ const Box3d = styled.div`
       transform: rotateX(0)
     }
     to {
-      transform: ${props => `rotateX(${props.reverse ? "-360deg" : "360deg"})`}
+      transform: rotateX(-360deg)
     }
   }
 
@@ -42,7 +42,7 @@ const Box3d = styled.div`
       transform: rotate(0)
     }
     to {
-      transform: ${props => `rotate(${props.reverse ? "-360deg" : "360deg"})`}
+      transform: rotate(-360deg)
     }
   }
 `;
@@ -66,6 +66,21 @@ export default class CreateBox extends React.Component {
     const Ima = new Image();
     Ima.src = this.props.frontSide;
     Ima.onload = () => this.calculo();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (
+      (prevProps.defaultWidth !== this.props.defaultWidth) ||
+      (prevProps.frontSide !== this.props.frontSide) ||
+      (prevProps.backSide !== this.props.backSide) ||
+      (prevProps.leftSide !== this.props.leftSide) ||
+      (prevProps.topSide !== this.props.topSide) ||
+      (prevProps.rightSide !== this.props.rightSide)
+    ) {
+      const Ima = new Image();
+      Ima.src = this.props.frontSide;
+      Ima.onload = () => this.calculo();
+    }
   }
 
   calculo = () => {
@@ -148,16 +163,15 @@ export default class CreateBox extends React.Component {
 };
 
 CreateBox.defaultProps = {
-  leftSide: "https://via.placeholder.com/200x200.png",
-  backSide: "https://via.placeholder.com/200x200.png",
-  frontSide: "https://via.placeholder.com/200x200.png",
-  rightSide: "https://via.placeholder.com/200x200.png",
-  topSide: "https://via.placeholder.com/200x200.png",
+  leftSide: "https://via.placeholder.com/200",
+  backSide: "https://via.placeholder.com/200",
+  frontSide: "https://via.placeholder.com/200",
+  rightSide: "https://via.placeholder.com/200",
+  topSide: "https://via.placeholder.com/200",
   margin: "5em auto auto",
   defaultWidth: 200,
   maxWidth: "150px",
   duration: "10s",
-  reverse: true,
   perspective: "800px",
   perspectiveOrigin: "50% -150px",
   transformOrigin: "50% 50% -2em",
