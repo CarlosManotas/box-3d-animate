@@ -1,7 +1,7 @@
 {
-  "name": "3d-box",
-  "version": "1.0.0",
-  "description": "3d-box React component",
+  "name": "box-3d-animate",
+  "version": "0.1.0",
+  "description": "Generator 3d box and animate for React component",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -21,18 +21,31 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "react": "16.x"
+    "react": "16.x",
+    "styled-components": "4.x"
   },
   "devDependencies": {
     "nwb": "0.23.x",
     "react": "16.6.3",
-    "react-dom": "16.6.3"
+    "react-dom": "16.6.3",
+    "styled-components": "4.1.1"
   },
-  "author": "",
-  "homepage": "",
+  "author": "Carlos Manotas<carlosmanotas@gmail.com>",
+  "homepage": "https://github.com/CarlosManotas/box-3d-animate#readme",
   "license": "MIT",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CarlosManotas/box-3d-animate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CarlosManotas/box-3d-animate.git/issues"
+  },
   "keywords": [
-    "react-component"
+    "react-component",
+    "3d",
+    "animate",
+    "css",
+    "box",
+    "styled-components"
   ]
 }
