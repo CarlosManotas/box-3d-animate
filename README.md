@@ -71,6 +71,21 @@ render() {
 | margin | 5em auto auto | String | 1px, auto 0, 4px auto 5px, ... |
 | shadowBottom | true | Boolean | true, false |
 | loading | `<LoadingComponent />` | ReactNode | `<span>loading...</span>` ... |
+| SSR | false | Boolean | true, false |
+
+## Nextjs example
+```javascript
+...
+import CreateBox3D from "box-3d-animate";
+...
+render() {
+  return (
+    <CreateBox3D
+      SSR={true}
+      ...
+    />
+  );
+}
 
 > Some examples [here](https://carlosmanotas.github.io/box-3d-animate/)
 
