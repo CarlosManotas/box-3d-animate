@@ -9,7 +9,7 @@
 ![alt text][box-3d]
 
 ## Installation
-
+> require react and styled-components
 via yarn, just follow these simple commands:
 
 ```bash
