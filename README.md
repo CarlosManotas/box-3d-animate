@@ -74,5 +74,5 @@ render() {
 ## License
 Box 3d animate is licensed under the MIT license. (http://opensource.org/licenses/MIT)
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+[npm-badge]: https://img.shields.io/npm/v/box-3d-animate.png?style=flat-square
+[npm]: https://www.npmjs.org/package/box-3d-animate
