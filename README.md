@@ -72,6 +72,7 @@ render() {
 | shadowBottom | true | Boolean | true, false |
 | loading | `<LoadingComponent />` | ReactNode | `<span>loading...</span>` ... |
 
+> Some examples [here](https://carlosmanotas.github.io/box-3d-animate/)
 
 ## License
 Box 3d animate is licensed under the MIT license. (http://opensource.org/licenses/MIT)
