@@ -6,6 +6,8 @@
 
 `Box 3d animate` is just a library for create 3d box with your images.
 
+![alt text][box-3d]
+
 ## Installation
 
 via yarn, just follow these simple commands:
@@ -76,3 +78,5 @@ Box 3d animate is licensed under the MIT license. (http://opensource.org/license
 
 [npm-badge]: https://img.shields.io/npm/v/box-3d-animate.png?style=flat-square
 [npm]: https://www.npmjs.org/package/box-3d-animate
+
+[box-3d]: https://github.com/CarlosManotas/box-3d-animate/blob/master/demo/src/box-3d-animate.gif

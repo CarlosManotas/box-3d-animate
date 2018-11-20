@@ -12,7 +12,7 @@ class Demo extends Component {
   render() {
     return (
       <div style={{textAlign: "center"}}>
-        <h1>3d-box Demo</h1>
+        <h1>Box 3d Animate Demo</h1>
         <Example
           defaultWidth={200}
           frontSide={frontSide}
