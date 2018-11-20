@@ -86,6 +86,7 @@ render() {
     />
   );
 }
+```
 
 > Some examples [here](https://carlosmanotas.github.io/box-3d-animate/)
 
