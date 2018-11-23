@@ -3,9 +3,10 @@ module.exports = {
   npm: {
     esModules: true,
     umd: {
-      global: 'Box3D',
+      global: 'CreateBox3D',
       externals: {
-        react: 'React'
+        'react': 'React',
+        'styled-components': 'styled-components'
       }
     }
   }
