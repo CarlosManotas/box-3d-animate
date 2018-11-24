@@ -92,11 +92,11 @@ export default class CreateBox extends React.Component {
     ) {
       waitLoadImages(
         this.calculo,
-        frontSide,
-        leftSide,
-        rightSide,
-        topSide,
-        backSide
+        this.props.frontSide,
+        this.props.leftSide,
+        this.props.rightSide,
+        this.props.topSide,
+        this.props.backSide
       );
     }
   }

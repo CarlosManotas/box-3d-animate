@@ -1,6 +1,6 @@
 {
   "name": "box-3d-animate",
-  "version": "0.3.2",
+  "version": "0.3.4",
   "description": "Generator 3d box and animate for React component",
   "main": "lib/index.js",
   "module": "es/index.js",
