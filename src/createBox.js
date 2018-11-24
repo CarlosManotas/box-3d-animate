@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import LoadingComponent from './loading';
 import BoxChild from './boxChild';
+import { waitLoadImages } from './helper'; 
 
 const Box3d = styled.div`
   position: relative;
@@ -47,8 +48,6 @@ const Box3d = styled.div`
   }
 `;
 
-
-
 export default class CreateBox extends React.Component {
   constructor(props) {
     super(props);
@@ -63,9 +62,23 @@ export default class CreateBox extends React.Component {
   }
 
   componentDidMount() {
-    const Ima = new Image();
-    Ima.src = this.props.frontSide;
-    Ima.onload = () => this.calculo();
+    const {
+      frontSide,
+      leftSide,
+      rightSide,
+      topSide,
+      backSide
+    } = this.props;
+
+    waitLoadImages(
+      this.calculo,
+      frontSide,
+      leftSide,
+      rightSide,
+      topSide,
+      backSide
+    );
+    
   }
 
   componentDidUpdate(prevProps) {
@@ -77,9 +90,14 @@ export default class CreateBox extends React.Component {
       (prevProps.topSide !== this.props.topSide) ||
       (prevProps.rightSide !== this.props.rightSide)
     ) {
-      const Ima = new Image();
-      Ima.src = this.props.frontSide;
-      Ima.onload = () => this.calculo();
+      waitLoadImages(
+        this.calculo,
+        frontSide,
+        leftSide,
+        rightSide,
+        topSide,
+        backSide
+      );
     }
   }
 
@@ -142,7 +160,7 @@ export default class CreateBox extends React.Component {
 
     return (
       <React.Fragment>
-        {loading && <LoadingComponent {...this.props}/>}
+        {loading && <LoadingComponent {...this.props} />}
         <Box3d {...this.props} {...stackProps}>
           <div className="box-3d">
             {allImages.map((side, index) => (
@@ -179,5 +197,6 @@ CreateBox.defaultProps = {
   iterationCount: "infinite",
   direction: "normal",
   animationName: "roundsY",
-  shadowBottom: true
+  shadowBottom: true,
+  loading: undefined
 }
