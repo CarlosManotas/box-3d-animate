@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
   }
 `
 
@@ -28,8 +29,9 @@ const Wrapper = styled.div`
   text-align: center;
   .container{
     display: flex;
+    flex-direction: column;
     & > div {
-      width: 50%;
+      width: 100%;
       &:nth-child(1){
         padding: 0 10px;
         display: flex;
@@ -42,6 +44,25 @@ const Wrapper = styled.div`
         background: #728
       }
     }
+    @media (min-width: 960px) {
+      flex-direction: row;
+      & > div {
+        width: 50%;
+      }
+    }
+  }
+`;
+
+const Pre = styled.pre`
+  text-align: left;
+  background: #333;
+  color: white;
+  max-width: 100%;
+  padding: 10px 5px;
+  margin-top: 100px;
+  @media (min-width: 960px) {
+    max-width: 50%;
+    margin-top: 5px;
   }
 `;
 
@@ -144,7 +165,7 @@ const Input = styled.div`
   select{
     border: none;
     width: 100%;
-    height: 25px;
+    height: 27px;
     border-radius: 0px !important;
     -webkit-appearance: none;
     background-color: white;
@@ -155,6 +176,7 @@ const Input = styled.div`
     padding-right: 1.5em
   }
 `;
+
 const InputLabel = ({ label, type, value, onChange }) => {
   return (
     <Input >
@@ -301,9 +323,9 @@ class Demo extends Component {
             </div>
             <Example {...stackProps} {...stackProps.otherExample}/>
           </div>
-          <pre style={{textAlign: 'left', background: '#333', color: 'white', maxWidth: '50%', padding: "10px 5px"}}>
+          <Pre>
             <Precode {...stackProps} />
-          </pre>
+          </Pre>
         </Wrapper>
       </React.Fragment>
     );

@@ -1,12 +1,14 @@
 # box-3d-animate
 
-[![npm package][npm-badge]][npm]
+[![npm version](https://badge.fury.io/js/box-3d-animate.svg)](https://badge.fury.io/js/box-3d-animate)
+[![npm](https://img.shields.io/npm/dt/box-3d-animate.svg)](https://npmcharts.com/compare/box-3d-animate?minimal=true)
+![MIT](https://img.shields.io/dub/l/vibe-d.svg)
 
 *small contribution for those who work with react and styled-components*
 
 `Box 3d animate` is just a library for create 3d box with your images.
 
-![alt text][box-3d]
+![alt text](https://github.com/CarlosManotas/box-3d-animate/blob/master/demo/src/box-3d-animate.gif)
 
 ## Installation
 > require react and styled-components
@@ -93,7 +95,5 @@ render() {
 ## License
 Box 3d animate is licensed under the MIT license. (http://opensource.org/licenses/MIT)
 
-[npm-badge]: https://img.shields.io/npm/v/box-3d-animate.png?style=flat-square
-[npm]: https://www.npmjs.org/package/box-3d-animate
 
 [box-3d]: https://github.com/CarlosManotas/box-3d-animate/blob/master/demo/src/box-3d-animate.gif
